@@ -1,0 +1,34 @@
+* {
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+body {
+    background-color: rgb(145, 123, 92);
+}
+
+body a {
+    float: right;
+}
+
+#no-solution,
+#one-solution,
+#double-solution,
+#msg-error,
+#msg-error-x2 {
+    display: none;
+}
+
+#msg-error,
+#msg-error-x2 {
+    color: rgb(153, 51, 51);
+    font-weight: bold;
+}
+
+#no-solution,
+#one-solution,
+#double-solution {
+    color: rgb(94, 94, 196);
+    font-weight: bold;
+}

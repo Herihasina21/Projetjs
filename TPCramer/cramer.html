@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cramer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="..\index.html">RETOUR
+    </a>
+    <form>
+        <h1>Systeme d'equation lineaire a 3 inconnues</h1>
+        <div>
+            <input type="number" id="a" required />
+            <label for="a">X+</label>
+            <input type="number" id="b" required />
+            <label for="b">Y+</label>
+            <input type="number" id="c" required />
+            <label for="c">Z=</label>
+            <input type="number" id="j" required />
+            <label for="j"></label>
+        </div>
+        <div>
+            <input type="number" id="d" required />
+            <label for="d">X+</label>
+            <input type="number" id="e" required />
+            <label for="e">Y+</label>
+            <input type="number" id="f" required />
+            <label for="f">Z=</label>
+            <input type="number" id="k" required />
+            <label for="k"></label>
+        </div>
+        <div>
+            <input type="number" id="g" required />
+            <label for="g">X+</label>
+            <input type="number" id="h" required />
+            <label for="h">Y+</label>
+            <input type="number" id="i" required />
+            <label for="i">Z=</label>
+            <input type="number" id="l" required />
+            <label for="l"></label>
+        </div>
+
+        <div>
+            <input type="button" value="Calculer" onclick="methCramer()" />
+            <input type="reset" onclick="cancel()" value="Annuler" /> <br>
+        </div>
+
+        <div id="msg-error">
+            <label>Tout les champs sont obligatoires.</label>
+        </div>
+
+        <div id="no-solution">
+            <label>Le systeme d'equation n'admet aucune solution car le determinant est egale a 0.</label>
+        </div>
+
+        <div id="solution">
+            <label>Le systeme d'equation admet des solutions car le determinant est different de 0.</label>
+            <div>
+                <label for="detA">Det A =</label>
+                <input type="text" id="detA" readonly />
+
+                <label for="detX">Det X =</label>
+                <input type="text" id="detX" readonly />
+
+                <label for="detY">Det Y =</label>
+                <input type="text" id="detY" readonly />
+
+                <label for="detZ">Det Z =</label>
+                <input type="text" id="detZ" readonly />
+            </div>
+            <div>
+                <h1>Solution</h1>
+                <div>
+                    <label for="solX">X =</label>
+                    <input type="text" id="solX" readonly />
+                </div>
+                <div>
+                    <label for="solY">Y =</label>
+                    <input type="text" id="solY" readonly />
+                </div>
+                <div>
+                    <label for="solZ">Z =</label>
+                    <input type="text" id="solZ" readonly />
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="cramer.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Equation 2nd degree</title>
+</head>
+
+<body>
+    <a href="..\index.html">RETOUR
+    </a>
+    <form>
+        <h1> Equation 2nd degree</h1>
+
+        <input type="number" id="a" required />
+        <label> X <sup>2</sup> + </label>
+
+        <input type="number" id="b" required />
+        <label> X +</label>
+
+        <input type="number" id="c" required />
+        <label> = 0 </label>
+
+        <input type="button" onclick="secondDegree()" value="Calculer" />
+        <input type="reset" onclick="cancel()" value="Annuler" />
+        <br />
+
+        <div id="msg-error">
+            <label>Tous les champs sont obligatoires.</label>
+        </div>
+
+        <div id="msg-error-x2">
+            <label>La valeur de "a" doit etre different de 0.</label>
+        </div>
+
+        <div id="no-solution">
+            <label>L'equation n'admet aucune solution dans R car le discriminant est negatif. </label>
+        </div>
+
+        <div id="one-solution">
+            <label->Le discriminant est égale 0 d'où la solultion : </label>
+                <br><br>
+                <label>X1 = X2 = </label>
+                <input type="text" id="sol" readonly />
+        </div>
+
+        <div id="double-solution">
+            <label>Le discriminant est positif d'où la soultion : </label>
+            <br><br>
+            <label>X1 = </label>
+            <input type="text" id="sol1" readonly />
+            <label>X2 = </label>
+            <input type="text" id="sol2" readonly />
+        </div>
+    </form>
+    <script src="second.js"></script>
+</body>
+
+</html>
