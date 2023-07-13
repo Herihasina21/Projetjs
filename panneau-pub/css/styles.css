@@ -1,14 +1,34 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+header {
+    flex: 1;
+    color: white;
+    padding: 10px;
+    align-items: center;
+    background-color: rgb(145, 123, 92);
+}
+
 main {
-    width: 80%;
+    width: 83%;
     margin: auto;
 }
 
-body a {
-    float: right;
+footer {
+    flex: 1;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(145, 123, 92);
 }
+
 .diapo {
     position: relative;
     overflow: hidden;
+    margin-top: 20px;
 }
 
 .elements {
@@ -31,6 +51,8 @@ body a {
     transform: translate(-50%, -50%);
     text-align: center;
     background-color: rgba(255, 255, 255, 0.4);
+    color: black;
+    font-weight: 600;
     padding: 10px;
 }
 
@@ -39,16 +61,18 @@ body a {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    color: rgb(121, 87, 87);
+    color: white;
     font-size: 2rem;
+    cursor: pointer;
+}
+
+.retour {
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: black;
     cursor: pointer;
 }
 
 #nav-droite {
     right: 0;
-}
-
-img {
-    width: 1920px;
-    height: 900px;
 }

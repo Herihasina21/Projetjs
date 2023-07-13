@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../breadcrumb-style.css">
+    <title>Equation 2nd degree</title>
+</head>
+
+<body>
+
+    <nav class="breadcrumbs">
+        <a href="../index.html" class="breadcrumbs__item">Accueil</a>
+        <a href="#" class="breadcrumbs__item is-active" style="cursor: default;">Equation du second degré</a>
+    </nav>
+
+    <main>
+        <div class="main-page">
+            <form>
+                <div style="margin-bottom: 20px;">
+                    <input type="number" id="a" required />
+                    <label> X <sup>2</sup> + </label>
+
+                    <input type="number" id="b" required />
+                    <label> X +</label>
+
+                    <input type="number" id="c" required />
+                    <label> = 0 </label>
+
+                    <input type="button" class="button" onclick="secondDegree()" value="Calculer" />
+                    <input type="reset" class="button" onclick="cancel()" value="Annuler" />
+                </div>
+
+                <div id="msg-error">
+                    <label>Tous les champs sont obligatoires.</label>
+                </div>
+
+                <div id="msg-error-x2">
+                    <label>La valeur de &quot;a&quot; doit etre différent de 0.</label>
+                </div>
+
+                <div id="no-solution">
+                    <label>L'equation n'admet aucune solution dans R car le discriminant est negatif. </label>
+                </div>
+
+                <div id="one-solution">
+                    <label->Le discriminant est égale 0 d'où la solultion : </label>
+                        <br><br>
+                        <label>X1 = X2 = </label>
+                        <input type="text" id="sol" readonly />
+                </div>
+
+                <div id="double-solution">
+                    <label>Le discriminant est positif d'où la soultion : </label>
+                    <br><br>
+                    <label>X1 = </label>
+                    <input type="text" id="sol1" readonly />
+                    <label>X2 = </label>
+                    <input type="text" id="sol2" readonly />
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>&copy; Copyright 2023 by Herihasina, Ladina, Fitiavana, Mahery</footer>
+    <script src="second.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cramer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../breadcrumb-style.css">
+</head>
+
+<body>
+    <nav class="breadcrumbs">
+        <a href="../index.html" class="breadcrumbs__item">Accueil</a>
+        <a href="#" class="breadcrumbs__item is-active" style="cursor: default;">Equation linéaire (Cramer)</a>
+    </nav>
+    <main>
+        <div class="main-page">
+            <form>
+                <div style="margin-bottom: 20px;">
+                    <div class="line-one">
+                        <input type="number" id="a" required />
+                        <label for="a">X+</label>
+                        <input type="number" id="b" required />
+                        <label for="b">Y+</label>
+                        <input type="number" id="c" required />
+                        <label for="c">Z=</label>
+                        <input type="number" id="j" required />
+                        <label for="j"></label>
+                    </div>
+                    <div class="line-two">
+                        <input type="number" id="d" required />
+                        <label for="d">X+</label>
+                        <input type="number" id="e" required />
+                        <label for="e">Y+</label>
+                        <input type="number" id="f" required />
+                        <label for="f">Z=</label>
+                        <input type="number" id="k" required />
+                        <label for="k"></label>
+                    </div>
+                    <div class="line-three">
+                        <input type="number" id="g" required />
+                        <label for="g">X+</label>
+                        <input type="number" id="h" required />
+                        <label for="h">Y+</label>
+                        <input type="number" id="i" required />
+                        <label for="i">Z=</label>
+                        <input type="number" id="l" required />
+                        <label for="l"></label>
+                    </div>
+            
+                    <div>
+                        <input type="button" class="button" value="Calculer" onclick="methCramer()" />
+                        <input type="reset" class="button" onclick="cancel()" value="Annuler" /> <br>
+                    </div>
+            
+                </div>
+                
+                <div id="msg-error">
+                    <label>Tout les champs sont obligatoires.</label>
+                </div>
+        
+                <div id="no-solution">
+                    <label>Le systeme d'equation n'admet aucune solution car le determinant est egale a 0.</label>
+                </div>
+        
+                <div id="solution">
+                    <div class="result">
+                        <label>Le systeme d'equation admet des solutions car le determinant est different de 0.</label>
+                    </div>
+                    <div class="result">
+                        <label>Det A =</label>
+                        <label id="detA"></label>
+        
+                        <label for="detX">Det X =</label>
+                        <label id="detX"></label>
+        
+                        <label for="detY">Det Y =</label>
+                        <label id="detY"></label>
+        
+                        <label for="detZ">Det Z =</label>
+                        <label id="detZ"></label>
+                    </div>
+                    <div class="result">
+                        <div class="result">
+                            <label for="solX">X =</label>
+                            <input type="text" id="solX" readonly />
+                        </div>
+                        <div class="result">
+                            <label for="solY">Y =</label>
+                            <input type="text" id="solY" readonly />
+                        </div class="result">
+                        <div class="result">
+                            <label for="solZ">Z =</label>
+                            <input type="text" id="solZ" readonly />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>&copy; Copyright 2023 by Herihasina, Ladina, Fitiavana, Mahery</footer>
+</body>
+<script src="cramer.js"></script>
+</html>
