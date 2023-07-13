@@ -38,10 +38,10 @@ function methCramer() {
         let solX = detX / detA;
         let solY = detY / detA;
         let solZ = detZ / detA;
-        document.getElementById("detA").value = detA;
-        document.getElementById("detX").value = detX;
-        document.getElementById("detY").value = detY;
-        document.getElementById("detZ").value = detZ;
+        document.getElementById("detA").innerHTML = detA+",";
+        document.getElementById("detX").innerHTML = detX+",";
+        document.getElementById("detY").innerHTML = detY+",";
+        document.getElementById("detZ").innerHTML = detZ;
         document.getElementById("solX").value = solX;
         document.getElementById("solY").value = solY;
         document.getElementById("solZ").value = solZ;
